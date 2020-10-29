@@ -1,0 +1,89 @@
+{% extends 'core/base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+Liste des langues
+
+<div class="container-fluid">
+    <div class="row m-5">
+        <div class="col-md-8">
+            <div class="row">FRANCAIS</div>
+            <div class="row">Ajouter une langue</div>
+
+            <form method="post">
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="{{ form.language.id_for_language }}">Langage</label>
+                        {{ form.language|add_class:'form-control' }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="{{ form.speaking_level.id_for_speaking_level }}">speaking_level</label>
+                        {{ form.speaking_level|add_class:'form-control' }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="{{ form.writting_level.id_for_writting_level }}">writting_level</label>
+                        {{ form.writting_level|add_class:'form-control' }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="{{ form.understanding_level.id_for_understanding_level }}">understanding_level</label>
+                        {{ form.understanding_level|add_class:'form-control' }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                <input type="submit" class="btn btn-primary" value="Enregistrer">
+                </div>
+            </form>
+
+
+        </div>
+
+        <div class="col-md-4 jumbotron">
+            <div class="row">Nombre de langues</div>
+            <div class="row"> {{ home.level_count }} </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Liste des langues
+        </div>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" class="header">Langue</th>
+                <th scope="col" class="header">Parlé</th>
+                <th scope="col" class="header">Ecrit</th>
+                <th scope="col" class="header">Compréhension</th>
+                <th scope="col" class="header">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for level in home.language_levels %}
+            <tr>
+                <td class="align-middle">{{ level.language.id }} </td>
+                <td class="align-middle">{{ level.speaking_level }} </td>
+                <td class="align-middle">{{ level.writting_level }}  </td>
+                <td class="align-middle">{{ level.understanding_level }}  </td>
+                <td class="align-right">
+                    <a href="/core/update/{{ level.id }}" class="btn btn-sm btn-secondary">Modifier</a>
+                    <a href="/core/detail/{{ level.id }}" class="btn btn-sm btn-secondary">Detail</a>
+                    <a href="/core/delete/{{ level.id }}" class="btn btn-sm btn-danger">Supprimer</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
