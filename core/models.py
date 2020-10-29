@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _  
 
 LANGUAGE_LEVEL_CHOICES = [
-    (1, 'Elementary'), (2, 'Pre-intermediate'), (3, 'Intermediate'), (4, 'Current')
+    (1, 'Elémentaire'), (2, 'Pré-intermédiaire'), (3, 'Intermédiaire'), (4, 'Courrant')
 ]
 
 # Create your models here.
