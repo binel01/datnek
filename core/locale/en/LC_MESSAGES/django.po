@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-30 00:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\core\models.py:5
+msgid "Elémentaire"
+msgstr "Elementary"
+
+#: .\core\models.py:5
+msgid "Pré-intermédiaire"
+msgstr "Pre-intermediate"
+
+#: .\core\models.py:5
+msgid "Intermédiaire"
+msgstr "Intermediate"
+
+#: .\core\models.py:5
+msgid "Courrant"
+msgstr "Current"
+
+#: .\core\models.py:10 .\core\models.py:26
+msgid "Language"
+msgstr "Language"
+
+#: .\core\models.py:11
+msgid "Niveau 1"
+msgstr "Level 1"
+
+#: .\core\models.py:12
+msgid "Niveau 2"
+msgstr "Level 2"
+
+#: .\core\models.py:13
+msgid "Niveau 3"
+msgstr "Level 3"
+
+#: .\core\models.py:14
+msgid "Niveau 4"
+msgstr "Level 4"
+
+#: .\core\models.py:27
+msgid "Speaking"
+msgstr "Speaking"
+
+#: .\core\models.py:28
+msgid "Writting"
+msgstr "Writting"
+
+#: .\core\models.py:29
+msgid "Understanding"
+msgstr "Understanding"
+
+#: .\core\templates\core\base.html:11
+msgid "Bienvenue sur l'application de gestion des langues"
+msgstr "Welcome on the languages management app"
+
+#: .\core\templates\core\base.html:34
+msgid "Francais"
+msgstr "French"
+
+#: .\core\templates\core\base.html:37
+msgid "Anglais"
+msgstr "English"
+
+#: .\core\templates\core\base.html:40
+msgid "Néerlandais"
+msgstr "Deutch"
+
+#: .\core\templates\core\index.html:9 .\core\templates\core\index.html:60
+msgid "Liste des langues"
+msgstr "List of Languages"
+
+#: .\core\templates\core\index.html:14
+msgid "FRANCAIS"
+msgstr "FRENCH"
+
+#: .\core\templates\core\index.html:15
+msgid "Ajouter une langue"
+msgstr "Add a language"
+
+#: .\core\templates\core\index.html:25
+msgid "Choisir la langue"
+msgstr "Choose a language"
+
+#: .\core\templates\core\index.html:29
+msgid "Niveau parlé"
+msgstr "Spoken level"
+
+#: .\core\templates\core\index.html:35
+msgid "Written level"
+msgstr ""
+
+#: .\core\templates\core\index.html:39
+msgid "Niveau compréhension"
+msgstr "Understood level"
+
+#: .\core\templates\core\index.html:53
+msgid "Nombre de langues"
+msgstr "Number of languages"
+
+#: .\core\templates\core\index.html:67
+msgid "Langue"
+msgstr "Language"
+
+#: .\core\templates\core\index.html:68
+msgid "Parlé"
+msgstr "Spoken"
+
+#: .\core\templates\core\index.html:69
+msgid "Ecrit"
+msgstr "Written"
+
+#: .\core\templates\core\index.html:70
+msgid "Compréhension"
+msgstr "Understanding"
+
+#: .\core\templates\core\index.html:71
+msgid "Actions"
+msgstr "Actions"
+
+#: .\core\templates\core\index.html:82
+msgid "Modifier"
+msgstr "Modify"
+
+#: .\core\templates\core\index.html:83
+msgid "Detail"
+msgstr "Detail"
+
+#: .\core\templates\core\index.html:84
+msgid "Supprimer"
+msgstr "Delete"

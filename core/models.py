@@ -1,17 +1,17 @@
 from django.db import models
-from django.utils.translation import gettext as _  
+from django.utils.translation import gettext_lazy as _  
 
 LANGUAGE_LEVEL_CHOICES = [
-    (1, 'Elémentaire'), (2, 'Pré-intermédiaire'), (3, 'Intermédiaire'), (4, 'Courrant')
+    (1, _('Elémentaire')), (2, _('Pré-intermédiaire')), (3, _('Intermédiaire')), (4, _('Courrant'))
 ]
 
 # Create your models here.
 class Language(models.Model):
     name = models.CharField(_("Language"), max_length=50)
-    level_1 = models.CharField(_("Level 1"), max_length=50)
-    level_2 = models.CharField(_("Level 2"), max_length=50)
-    level_3 = models.CharField(_("Level 3"), max_length=50)
-    level_4 = models.CharField(_("Level 4"), max_length=50)
+    level_1 = models.CharField(_("Niveau 1"), max_length=50)
+    level_2 = models.CharField(_("Niveau 2"), max_length=50)
+    level_3 = models.CharField(_("Niveau 3"), max_length=50)
+    level_4 = models.CharField(_("Niveau 4"), max_length=50)
 
     def __str__(self):
         return self.name

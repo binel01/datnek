@@ -1,16 +1,18 @@
 {% extends 'core/base.html' %}
 
+{% load i18n %}
+
 {% load widget_tweaks %}
 
 {% block content %}
 
-Liste des langues
+{% trans "Liste des langues" %}
 
 <div class="container-fluid">
     <div class="row m-5">
         <div class="col-md-8">
-            <div class="row">FRANCAIS</div>
-            <div class="row">Ajouter une langue</div>
+            <div class="row m-2">{% trans "FRANCAIS" %} </div>
+            <div class="row m-2">{% trans "Ajouter une langue" %}</div>
 
             <form method="post">
                 {% csrf_token %}
@@ -20,21 +22,21 @@ Liste des langues
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="{{ form.language.id_for_language }}">Choisir la langue*</label>
+                        <label for="{{ form.language.id_for_language }}">{% trans "Choisir la langue" %}*</label>
                         {{ form.language|add_class:'form-control' }}
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="{{ form.speaking_level.id_for_speaking_level }}">Niveau parlé*</label>
+                        <label for="{{ form.speaking_level.id_for_speaking_level }}">{% trans "Niveau parlé" %}*</label>
                         {{ form.speaking_level|add_class:'form-control' }}
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="{{ form.writting_level.id_for_writting_level }}">Niveau écrit*</label>
+                        <label for="{{ form.writting_level.id_for_writting_level }}">{% trans "Niveau écrit" %}*</label>
                         {{ form.writting_level|add_class:'form-control' }}
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="{{ form.understanding_level.id_for_understanding_level }}">Niveau compréhension*</label>
+                        <label for="{{ form.understanding_level.id_for_understanding_level }}">{% trans "Niveau compréhension" %}*</label>
                         {{ form.understanding_level|add_class:'form-control' }}
                     </div>
                 </div>
@@ -47,26 +49,26 @@ Liste des langues
 
         </div>
 
-        <div class="col-md-4 jumbotron">
-            <div class="row">Nombre de langues</div>
+        <div class="col-md-4 mt-2 jumbotron">
+            <div class="row">{% trans "Nombre de langues" %}</div>
             <div class="row"> {{ home.level_count }} </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            Liste des langues
+            {% trans "Liste des langues" %}
         </div>
     </div>
     
     <table class="table">
         <thead>
             <tr>
-                <th scope="col" class="header">Langue</th>
-                <th scope="col" class="header">Parlé</th>
-                <th scope="col" class="header">Ecrit</th>
-                <th scope="col" class="header">Compréhension</th>
-                <th scope="col" class="header">Actions</th>
+                <th scope="col" class="header">{% trans "Langue" %}</th>
+                <th scope="col" class="header">{% trans "Parlé" %}</th>
+                <th scope="col" class="header">{% trans "Ecrit" %}</th>
+                <th scope="col" class="header">{% trans "Compréhension" %}</th>
+                <th scope="col" class="header">{% trans "Actions" %}</th>
             </tr>
         </thead>
         <tbody>
@@ -77,9 +79,9 @@ Liste des langues
                 <td class="align-middle">{{ level.writting_level }}  </td>
                 <td class="align-middle">{{ level.understanding_level }}  </td>
                 <td class="align-right">
-                    <a href="/core/update/{{ level.id }}" class="btn btn-sm btn-secondary">Modifier</a>
-                    <a href="/core/detail/{{ level.id }}" class="btn btn-sm btn-secondary">Detail</a>
-                    <a href="/core/delete/{{ level.id }}" class="btn btn-sm btn-danger">Supprimer</a>
+                    <a href="/core/update/{{ level.id }}" class="btn btn-sm btn-secondary">{% trans "Modifier" %}</a>
+                    <a href="/core/detail/{{ level.id }}" class="btn btn-sm btn-secondary">{% trans "Detail" %}</a>
+                    <a href="/core/delete/{{ level.id }}" class="btn btn-sm btn-danger">{% trans "Supprimer" %}</a>
                 </td>
             </tr>
             {% endfor %}

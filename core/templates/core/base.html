@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!doctype html>
 <html lang="en">
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Bineli Arsene">
-    <title>{% block title %}Datnek - Bienvenue sur l'application de gestion des langues {% endblock %}</title>
+    <title>{% block title %}Datnek - {% trans "Bienvenue sur l'application de gestion des langues" %} {% endblock title %}</title>
 
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' rel="stylesheet">
 
@@ -30,13 +31,13 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link active" href="/">Francais</a>
+        <a class="nav-link active" href="/">{% trans "Francais" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Anglais</a>
+        <a class="nav-link" href="#">{% trans "Anglais" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Espagnol</a>
+        <a class="nav-link" href="#">{% trans "Néerlandais" %}</a>
       </li>
     </ul>
   </div>
