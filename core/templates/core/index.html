@@ -42,7 +42,7 @@
                 </div>
                 
                 <div class="row">
-                <input type="submit" class="btn btn-primary" value="Enregistrer">
+                <input type="submit" class="btn btn-primary" value="{% trans "Enregistrer" %}">
                 </div>
             </form>
 
@@ -74,7 +74,7 @@
         <tbody>
             {% for level in home.language_levels %}
             <tr>
-                <td class="align-middle">{{ level.language.id }} </td>
+                <td class="align-middle">{{ level.language }} </td>
                 <td class="align-middle">{{ level.speaking_level }} </td>
                 <td class="align-middle">{{ level.writting_level }}  </td>
                 <td class="align-middle">{{ level.understanding_level }}  </td>
