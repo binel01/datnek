@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-30 09:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\core\models.py:5
+msgid "Elémentaire"
+msgstr "Elementair"
+
+#: .\core\models.py:5
+msgid "Pré-intermédiaire"
+msgstr "Halfgevorderden"
+
+#: .\core\models.py:5
+msgid "Intermédiaire"
+msgstr "Gevorderd"
+
+#: .\core\models.py:5
+msgid "Courrant"
+msgstr "Vloeiend"
+
+#: .\core\models.py:9
+msgid "Français"
+msgstr "Frans"
+
+#: .\core\models.py:9 .\core\templates\core\base.html:37
+msgid "Anglais"
+msgstr "Engels"
+
+#: .\core\models.py:9 .\core\templates\core\base.html:40
+msgid "Néerlandais"
+msgstr "Nederlands"
+
+#: .\core\models.py:14 .\core\templates\core\index.html:67
+msgid "Langue"
+msgstr "Taal"
+
+#: .\core\models.py:15 .\core\templates\core\index.html:68
+msgid "Parlé"
+msgstr "Gesproken"
+
+#: .\core\models.py:16 .\core\templates\core\index.html:69
+msgid "Ecrit"
+msgstr "Schrijven"
+
+#: .\core\models.py:17 .\core\templates\core\index.html:70
+msgid "Compréhension"
+msgstr "Begrijpend"
+
+#: .\core\templates\core\base.html:11
+msgid "Bienvenue sur l'application de gestion des langues"
+msgstr "Welkom bij de taalbeheertoepassing"
+
+#: .\core\templates\core\base.html:34
+msgid "Francais"
+msgstr "Frans"
+
+#: .\core\templates\core\index.html:9 .\core\templates\core\index.html:60
+msgid "Liste des langues"
+msgstr "Lijst met talen"
+
+#: .\core\templates\core\index.html:14
+msgid "FRANCAIS"
+msgstr "FRANS"
+
+#: .\core\templates\core\index.html:15
+msgid "Ajouter une langue"
+msgstr "Taal toevoegen"
+
+#: .\core\templates\core\index.html:25
+msgid "Choisir la langue"
+msgstr "Taal kiezen"
+
+#: .\core\templates\core\index.html:29
+msgid "Niveau parlé"
+msgstr "Gesproken niveau"
+
+#: .\core\templates\core\index.html:35
+msgid "Niveau écrit"
+msgstr "Schriftelijk niveau"
+
+#: .\core\templates\core\index.html:39
+msgid "Niveau compréhension"
+msgstr "Inzicht in niveau"
+
+#: .\core\templates\core\index.html:45
+msgid "Enregistrer"
+msgstr "Opslaan"
+
+#: .\core\templates\core\index.html:53
+msgid "Nombre de langues"
+msgstr "Aantal talen"
+
+#: .\core\templates\core\index.html:71
+msgid "Actions"
+msgstr "Acties"
+
+#: .\core\templates\core\index.html:82
+msgid "Modifier"
+msgstr "Wijzigen"
+
+#: .\core\templates\core\index.html:83
+msgid "Detail"
+msgstr "Detail"
+
+#: .\core\templates\core\index.html:84
+msgid "Supprimer"
+msgstr "Verwijderen"
