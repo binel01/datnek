@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-30 09:17+0100\n"
+"POT-Creation-Date: 2020-10-30 11:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,27 +39,27 @@ msgstr "Current"
 msgid "Français"
 msgstr "French"
 
-#: .\core\models.py:9 .\core\templates\core\base.html:37
+#: .\core\models.py:9 .\core\templates\core\base.html:38
 msgid "Anglais"
 msgstr "English"
 
-#: .\core\models.py:9 .\core\templates\core\base.html:40
+#: .\core\models.py:9 .\core\templates\core\base.html:41
 msgid "Néerlandais"
 msgstr "Deutch"
 
-#: .\core\models.py:14 .\core\templates\core\index.html:67
+#: .\core\models.py:14 .\core\templates\core\index.html:91
 msgid "Langue"
 msgstr "Language"
 
-#: .\core\models.py:15 .\core\templates\core\index.html:68
+#: .\core\models.py:15 .\core\templates\core\index.html:92
 msgid "Parlé"
 msgstr "Spoken"
 
-#: .\core\models.py:16 .\core\templates\core\index.html:69
+#: .\core\models.py:16 .\core\templates\core\index.html:93
 msgid "Ecrit"
 msgstr "Written"
 
-#: .\core\models.py:17 .\core\templates\core\index.html:70
+#: .\core\models.py:17 .\core\templates\core\index.html:94
 msgid "Compréhension"
 msgstr "Understanding"
 
@@ -67,59 +67,59 @@ msgstr "Understanding"
 msgid "Bienvenue sur l'application de gestion des langues"
 msgstr "Welcome on the languages management app"
 
-#: .\core\templates\core\base.html:34
+#: .\core\templates\core\base.html:35
 msgid "Francais"
 msgstr "French"
 
-#: .\core\templates\core\index.html:9 .\core\templates\core\index.html:60
-msgid "Liste des langues"
-msgstr "List of Languages"
-
-#: .\core\templates\core\index.html:14
+#: .\core\templates\core\index.html:36
 msgid "FRANCAIS"
 msgstr "FRENCH"
 
-#: .\core\templates\core\index.html:15
+#: .\core\templates\core\index.html:37
 msgid "Ajouter une langue"
 msgstr "Add a language"
 
-#: .\core\templates\core\index.html:25
+#: .\core\templates\core\index.html:46
 msgid "Choisir la langue"
 msgstr "Choose a language"
 
-#: .\core\templates\core\index.html:29
+#: .\core\templates\core\index.html:50 .\core\templates\core\index.html:123
 msgid "Niveau parlé"
 msgstr "Spoken level"
 
-#: .\core\templates\core\index.html:35
+#: .\core\templates\core\index.html:56 .\core\templates\core\index.html:124
 #, fuzzy
 msgid "Niveau écrit"
 msgstr "Written level"
 
-#: .\core\templates\core\index.html:39
+#: .\core\templates\core\index.html:60 .\core\templates\core\index.html:125
 msgid "Niveau compréhension"
 msgstr "Understood level"
 
-#: .\core\templates\core\index.html:45
+#: .\core\templates\core\index.html:65
 msgid "Enregistrer"
 msgstr "Save"
 
-#: .\core\templates\core\index.html:53
+#: .\core\templates\core\index.html:76
 msgid "Nombre de langues"
 msgstr "Number of languages"
 
-#: .\core\templates\core\index.html:71
+#: .\core\templates\core\index.html:84
+msgid "Liste des langues"
+msgstr "List of Languages"
+
+#: .\core\templates\core\index.html:95
 msgid "Actions"
 msgstr "Actions"
 
-#: .\core\templates\core\index.html:82
+#: .\core\templates\core\index.html:106
 msgid "Modifier"
 msgstr "Modify"
 
-#: .\core\templates\core\index.html:83
-msgid "Detail"
+#: .\core\templates\core\index.html:107 .\core\templates\core\index.html:119
+msgid "Détail"
 msgstr "Detail"
 
-#: .\core\templates\core\index.html:84
+#: .\core\templates\core\index.html:108
 msgid "Supprimer"
 msgstr "Delete"

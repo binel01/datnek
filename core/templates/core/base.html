@@ -19,8 +19,9 @@
   <head>
 
 <body>
+<div class="container">
 {% block navigation %}
-<nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="/">
   <span class="h1 mb-0">Datnek</span>
   </a>
@@ -31,20 +32,20 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link active" href="/">{% trans "Francais" %}</a>
+        <a class="nav-link" {% if LANGUAGE_CODE == 'fr' %}active{% endif %} href="/fr/">{% trans "Francais" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">{% trans "Anglais" %}</a>
+        <a class="nav-link" {% if LANGUAGE_CODE == 'en' %}active{% endif %} href="/en/">{% trans "Anglais" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">{% trans "Néerlandais" %}</a>
+        <a class="nav-link" {% if LANGUAGE_CODE == 'nl' %}active{% endif %} href="/nl/">{% trans "Néerlandais" %}</a>
       </li>
     </ul>
   </div>
 </nav>
 {% endblock navigation %}
 
-<div class="container mt-5">
+
 {% block content %}
 
 

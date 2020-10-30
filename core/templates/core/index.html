@@ -4,60 +4,85 @@
 
 {% load widget_tweaks %}
 
+{% block style %}
+
+.jumbotron>h5, h3 {
+    text-align: center;
+}
+
+{% endblock style %}
+
+{% block script %}
+ 
+$('#levelModal').on('shown.bs.modal', function() {
+    $('#openState').html('Modal open')
+    $('#openState').removeClass('btn-secondary')
+    $('#openState').addClass('btn-success')
+})
+
+$('#levelModal').on('hidden.bs.modal', function() {
+    $('#openState').html('Modal closed')
+    $('#openState').addClass('btn-secondary')
+    $('#openState').removeClass('btn-success')
+})
+
+{% endblock script %}
+
 {% block content %}
 
-{% trans "Liste des langues" %}
-
 <div class="container-fluid">
-    <div class="row m-5">
+    <div class="row mt-8 mb-5 ml-2">
         <div class="col-md-8">
-            <div class="row m-2">{% trans "FRANCAIS" %} </div>
-            <div class="row m-2">{% trans "Ajouter une langue" %}</div>
-
+            <div class="row mb-3"><h3>{% trans "FRANCAIS" %} -- {{context_object}} </h3></div>
+            
+            <div class="row"><h5>{% trans "Ajouter une langue" %}</h5></div>
             <form method="post">
-                {% csrf_token %}
-                {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-                {% endfor %}
+                    {% csrf_token %}
+                    {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                    {% endfor %}
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="{{ form.language.id_for_language }}">{% trans "Choisir la langue" %}*</label>
-                        {{ form.language|add_class:'form-control' }}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.language.id_for_language }}">{% trans "Choisir la langue" %}*</label>
+                            {{ form.language|add_class:'form-control' }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.speaking_level.id_for_speaking_level }}">{% trans "Niveau parlé" %}*</label>
+                            {{ form.speaking_level|add_class:'form-control' }}
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="{{ form.speaking_level.id_for_speaking_level }}">{% trans "Niveau parlé" %}*</label>
-                        {{ form.speaking_level|add_class:'form-control' }}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.writting_level.id_for_writting_level }}">{% trans "Niveau écrit" %}*</label>
+                            {{ form.writting_level|add_class:'form-control' }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.understanding_level.id_for_understanding_level }}">{% trans "Niveau compréhension" %}*</label>
+                            {{ form.understanding_level|add_class:'form-control' }}
+                        </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="{{ form.writting_level.id_for_writting_level }}">{% trans "Niveau écrit" %}*</label>
-                        {{ form.writting_level|add_class:'form-control' }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="{{ form.understanding_level.id_for_understanding_level }}">{% trans "Niveau compréhension" %}*</label>
-                        {{ form.understanding_level|add_class:'form-control' }}
-                    </div>
-                </div>
-                
-                <div class="row">
-                <input type="submit" class="btn btn-primary" value="{% trans "Enregistrer" %}">
-                </div>
+                    
+                    <input type="submit" class="btn btn-primary" value="{% trans 'Enregistrer' %}">
             </form>
-
 
         </div>
 
-        <div class="col-md-4 mt-2 jumbotron">
-            <div class="row">{% trans "Nombre de langues" %}</div>
-            <div class="row"> {{ home.level_count }} </div>
+
+        <div class="col-md-4 mt-2">
+            <div class="row">
+                <button class="btn btn-secondary" id="openState">Modal closed</button>
+            </div>
+            <div class="jumbotron mt-2">
+                <h5>{% trans "Nombre de langues" %}</h5><br>
+                <h3>{{ home.level_count }}</h3>
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            {% trans "Liste des langues" %}
+            <h5>{% trans "Liste des langues" %}</h5>
         </div>
     </div>
     
@@ -79,11 +104,35 @@
                 <td class="align-middle">{{ level.writting_level }}  </td>
                 <td class="align-middle">{{ level.understanding_level }}  </td>
                 <td class="align-right">
-                    <a href="/core/update/{{ level.id }}" class="btn btn-sm btn-secondary">{% trans "Modifier" %}</a>
-                    <a href="/core/detail/{{ level.id }}" class="btn btn-sm btn-secondary">{% trans "Detail" %}</a>
-                    <a href="/core/delete/{{ level.id }}" class="btn btn-sm btn-danger">{% trans "Supprimer" %}</a>
+                    <a href="#" class="btn btn-sm btn-success">{% trans "Modifier" %}</a>
+                    <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#levelModal">{% trans "Détail" %}</button>
+                    <a href="#" class="btn btn-sm btn-danger">{% trans "Supprimer" %}</a>
                 </td>
             </tr>
+
+            <!-- Level Modal -->
+            <div class="modal fade" id="levelModal" role="dialog">
+                <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">{% trans "Détail" %}</h4>
+                    </div>
+                    <div class="modal-body">
+                    <strong>{{ level.language }}</strong><br>
+                    <strong>{% trans "Niveau parlé" %} : </strong>{{ level.speaking_level }}<br>
+                    <strong>{% trans "Niveau écrit" %} : </strong>{{ level.writting_level }}<br>
+                    <strong>{% trans "Niveau compréhension" %} : </strong>{{ level.understanding_level }}
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+
             {% endfor %}
         </tbody>
     </table>
